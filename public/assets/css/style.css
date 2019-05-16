@@ -1,0 +1,122 @@
+/* Override the default styles with a reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    -webkit-animation: bg 30s infinite;
+    animation: bg 30s infinite;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+}
+
+.container {
+    width: 80%;
+    margin: 0 10%;
+    background: lightgrey;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    font-weight: lighter;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    background-image: url('../images/cph-bg.jpg');
+    background-size: 1280px;
+    background-position: 0px -270px;
+    padding: 3em 2em 10em 2em;
+    border-bottom: 6px solid black;
+}
+
+.nav {
+    display: flex;
+    align-items: flex-end;
+}
+
+.nav-item {
+    list-style: none;
+}
+
+.nav-link,
+.nav-header {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    background-color: black;
+    text-align: center;
+    padding: 5px 7px;
+    margin-right: 1em;
+    border-radius: 5%;
+}
+
+.nav-link {
+    display: block;
+    position: relative;
+}
+
+.nav-header {
+    font-weight: lighter;
+}
+
+.nav-link:hover,
+.nav-header:hover {
+    background-color: #99badd;
+}
+
+.content {
+    padding: 50px;
+}
+
+.content-title {
+    margin-bottom: 10px;
+}
+
+.content-date {
+    margin-bottom: 25px;
+}
+
+.content-body p {
+    margin-bottom: 25px;
+}
+
+.content-body p:last-of-type {
+    margin-bottom: 0;
+}
+
+.footer {
+    display: block;
+    background-color: #424242;
+    color: rgba(255, 255, 255, 0.8);
+    padding: 10px 35px;
+}
+
+/* Made with the color scheme of Copenhagen */
+@keyframes bg {
+    0% {
+        background-color: #F77206
+    }
+
+    20% {
+        background-color: #EBDBCA
+    }
+
+    40% {
+        background-color: #075895
+    }
+
+    60% {
+        background-color: #FBF87E;
+    }
+
+    80% {
+        background-color: #2B967F
+    }
+
+    100% {
+        background-color: #FEDE0E;
+    }
+}
