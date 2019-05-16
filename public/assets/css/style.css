@@ -8,29 +8,37 @@
 body {
     display: flex;
     justify-content: center;
-    -webkit-animation: bg 30s infinite;
-    animation: bg 30s infinite;
+    -webkit-animation: bg 60s infinite;
+    animation: bg 60s infinite;
     -webkit-animation-direction: alternate;
     animation-direction: alternate;
 }
 
 .container {
-    width: 80%;
-    margin: 0 10%;
+    width: 85%;
+    margin: 0 7.5%;
     background: lightgrey;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-size: 1em;
     font-weight: lighter;
+}
+
+.header-ctr {
+    position: relative;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+    color: whitesmoke;
+    background-image: url('../images/cph-bg.jpg');
+    border-bottom: 6px solid black;
 }
 
 .header {
     display: flex;
     justify-content: space-between;
-    background-image: url('../images/cph-bg.jpg');
-    background-size: 1280px;
-    background-position: 0px -270px;
-    padding: 3em 2em 10em 2em;
-    border-bottom: 6px solid black;
+    padding: 5em 2em 10em 2em;
 }
 
 .nav {
@@ -48,7 +56,7 @@ body {
     text-decoration: none;
     background-color: black;
     text-align: center;
-    padding: 5px 7px;
+    padding: 6px 8px;
     margin-right: 1em;
     border-radius: 5%;
 }
@@ -64,7 +72,7 @@ body {
 
 .nav-link:hover,
 .nav-header:hover {
-    background-color: #99badd;
+    background-color: #2B967F;
 }
 
 .content {
@@ -72,15 +80,29 @@ body {
 }
 
 .content-title {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    text-align: center;
+    letter-spacing: 1.5px;
+}
+
+.blog-title {
+    margin-bottom: 15px;
 }
 
 .content-date {
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 
 .content-body p {
     margin-bottom: 25px;
+}
+
+.content-body a {
+    color: #075895;
+}
+
+.content-body a:hover {
+    color: #F77206;
 }
 
 .content-body p:last-of-type {
@@ -94,14 +116,51 @@ body {
     padding: 10px 35px;
 }
 
+.footer-copyright {
+    text-align: center;
+}
+
+.todo-list {
+    list-style: none;
+}
+
+.todo-list li {
+    counter-increment: todo;
+    margin-bottom: 3%;
+}
+
+.todo-list li:last-of-type {
+    margin-bottom: 0;
+}
+
+.todo-list li::before {
+    content: counter(todo);
+    background: #2B967F;
+    font-size: 1.2em;
+    text-shadow: 1px 1px gray;
+    color: #EBDBCA;
+    text-align: center;
+    margin-right: 7px;
+    font-style: italic;
+    padding: 0.15em 0.5em;
+    border-radius: 30%;
+}
+
+hr {
+    width: 100%;
+    margin: 0 auto;
+    border: 0.5px solid black;
+    margin-bottom: 30px;
+}
+
 /* Made with the color scheme of Copenhagen */
 @keyframes bg {
     0% {
-        background-color: #F77206
+        background-color: #EBDBCA
     }
 
     20% {
-        background-color: #EBDBCA
+        background-color: #F77206
     }
 
     40% {
