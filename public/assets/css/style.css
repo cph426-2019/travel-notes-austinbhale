@@ -125,7 +125,7 @@ body {
 }
 
 .todo-list li {
-    counter-increment: todo;
+    counter-increment: todo_list;
     margin-bottom: 3%;
 }
 
@@ -134,7 +134,7 @@ body {
 }
 
 .todo-list li::before {
-    content: counter(todo);
+    content: counter(todo_list);
     background: #2B967F;
     font-size: 1.2em;
     text-shadow: 1px 1px gray;
@@ -150,7 +150,23 @@ hr {
     width: 100%;
     margin: 0 auto;
     border: 0.5px solid black;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
+}
+
+.profile-pic {
+    float: left;
+    position: relative;
+    width: 200px;
+    border-radius: 100%;
+    padding: 15px 15px 15px 15px;
+}
+
+/* Removes the parallax effect for mobile devices. */
+@media only screen and (max-width: 749px) {
+    .header-ctr {
+        background-size: 1280px;
+        background-attachment: inherit;
+    }
 }
 
 /* Made with the color scheme of Copenhagen */
