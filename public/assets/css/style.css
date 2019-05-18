@@ -1,4 +1,4 @@
-/* Overrides the default styles with a reset. */
+/* Overrides the default styles with a global CSS reset. */
 * {
     margin: 0;
     padding: 0;
@@ -21,6 +21,7 @@ body {
     font-family: 'Raleway', sans-serif;
     font-size: 1em;
     font-weight: lighter;
+    overflow: hidden;
 }
 
 .header-ctr {
@@ -68,16 +69,13 @@ body {
 
 .nav-header {
     font-weight: lighter;
-    line-height: 1.5em; /* To prevent clumping for smaller widths. */
+    /* To prevent clumping for smaller widths. */
+    line-height: 1.5em;
 }
 
 .nav-link:hover,
 .nav-header:hover {
     background-color: #2B967F;
-}
-
-nav li:last-of-type {
-    margin-right: 0;
 }
 
 .content {
@@ -116,6 +114,7 @@ nav li:last-of-type {
 }
 
 .footer {
+    clear: both;
     display: block;
     background-color: #424242;
     color: rgba(228, 228, 228);
@@ -126,7 +125,8 @@ nav li:last-of-type {
     text-align: center;
 }
 
-.todo-list, .about-list {
+.todo-list,
+.about-list {
     list-style: none;
 }
 
