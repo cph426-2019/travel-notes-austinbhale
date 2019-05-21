@@ -93,6 +93,10 @@ body {
     letter-spacing: 1px;
 }
 
+.blog-post {
+    margin-bottom: 15px;
+}
+
 .blog-title {
     margin-bottom: 15px;
 }
