@@ -5,6 +5,15 @@
     box-sizing: border-box;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Montserrat', sans-serif;
+}
+
 body {
     display: flex;
     justify-content: center;
@@ -34,12 +43,21 @@ body {
     color: rgb(228, 228, 228);
     background-image: url('../images/cph-bg.jpg');
     border-bottom: 6px solid black;
+    display: flex;
+    justify-content: center;  
 }
 
 .header {
     display: flex;
+    position: fixed;
     justify-content: space-between;
-    padding: 5em 2em 10em 2em;
+    background-color: rgb(0, 0, 0, 0.9);
+    width: 85%;
+}
+
+.nav-header {
+    display: flex;
+    justify-content: center;
 }
 
 .nav {
@@ -49,32 +67,19 @@ body {
 
 .nav-item {
     list-style: none;
-}
-
-.nav-link,
-.nav-header {
-    color: rgb(228, 228, 228);
-    text-decoration: none;
-    background-color: black;
-    text-align: center;
-    padding: 6px 8px;
-    margin-right: 1em;
-    border-radius: 3%;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .nav-link {
-    display: block;
-    position: relative;
-}
-
-.nav-header {
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 0.3em 1em;
+    color: rgba(228, 228, 228);
     font-weight: lighter;
-    /* To prevent clumping for smaller widths. */
-    line-height: 1.5em;
 }
 
-.nav-link:hover,
-.nav-header:hover {
+.nav-link:hover {
     background-color: #2B967F;
 }
 
@@ -85,7 +90,7 @@ body {
 .content-title {
     margin-bottom: 15px;
     text-align: center;
-    letter-spacing: 1.5px;
+    letter-spacing: 1px;
 }
 
 .blog-title {
@@ -98,7 +103,7 @@ body {
 
 .content-body p {
     margin-bottom: 25px;
-    line-height: 1.5em;
+    line-height: 1.4em;
 }
 
 .content-body a {
@@ -131,13 +136,13 @@ body {
 }
 
 .about-list li {
-    line-height: 1.5em;
+    line-height: 1.4em;
 }
 
 .todo-list li {
     counter-increment: todo_list;
     margin-bottom: 1em;
-    line-height: 1.5em;
+    line-height: 1.4em;
 }
 
 .todo-list li:last-of-type {
