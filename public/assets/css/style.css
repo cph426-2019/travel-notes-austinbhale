@@ -5,6 +5,7 @@
     box-sizing: border-box;
 }
 
+/* Mobile-First Development with generic CSS styling first. */
 h1,
 h2,
 h3,
@@ -12,15 +13,21 @@ h4,
 h5,
 h6 {
     font-family: 'Montserrat', sans-serif;
+    font-size: 1.5em;
 }
 
 body {
-    display: flex;
-    justify-content: center;
     -webkit-animation: bg 60s infinite;
     animation: bg 60s infinite;
     -webkit-animation-direction: alternate;
     animation-direction: alternate;
+    overflow-x: hidden;
+}
+
+.page {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .container {
@@ -35,24 +42,25 @@ body {
 
 .header-ctr {
     position: relative;
-    background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
-    height: 500px;
+    background-size: 1280px;
+    background-attachment: inherit;
+    height: 350px;
     color: rgb(228, 228, 228);
     background-image: url('../images/cph-bg.jpg');
     border-bottom: 6px solid black;
     display: flex;
-    justify-content: center;  
+    justify-content: center;
 }
 
 .header {
     display: flex;
     position: fixed;
     justify-content: space-between;
-    background-color: rgb(0, 0, 0);
-    width: 85%;
+    width: 100%;
+    background-color: #000000;
+    text-align: center;
 }
 
 .nav-header {
@@ -83,8 +91,16 @@ body {
     background-color: #2B967F;
 }
 
+.section {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
 .content {
-    padding: 50px;
+    padding: 25px;
 }
 
 .content-title {
@@ -94,7 +110,11 @@ body {
 }
 
 .blog-post {
-    margin-bottom: 15px;
+    margin-bottom: 25px;
+}
+
+.content>div:last-child {
+    margin-bottom: 0px;
 }
 
 .blog-title {
@@ -107,7 +127,7 @@ body {
 
 .content-body p {
     margin-bottom: 25px;
-    line-height: 1.4em;
+    line-height: 1.5em;
 }
 
 .content-body a {
@@ -177,21 +197,13 @@ hr {
 /* Holds the about me profile picture to the left. */
 .profile-pic {
     float: left;
-    width: 200px;
+    width: 100%;
     border-radius: 100%;
-    padding: 15px 15px 15px 15px;
+    padding: 0px 25px 15px 25px;
 }
 
 .enlarge-text {
     font-size: 1.15em;
-}
-
-/* Removes the parallax effect for mobile devices. */
-@media only screen and (max-width: 749px) {
-    .header-ctr {
-        background-size: 1280px;
-        background-attachment: inherit;
-    }
 }
 
 /* Transitions through the color scheme of Copenhagen houses. */
@@ -218,5 +230,60 @@ hr {
 
     100% {
         background-color: #FEDE0E;
+    }
+}
+
+/* Tablet Styles */
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+    .header-ctr {
+        height: 500px;
+    }
+
+    .profile-pic {
+        width: 250px;
+    }
+
+    .nav-link {
+        padding: 0.8em 1em;
+    }
+
+    .content {
+        padding: 40px;
+    }
+}
+
+/* Desktop Styles */
+@media only screen and (min-width: 961px) {
+    .header-ctr {
+        height: 500px;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+
+    .header {
+        width: 960px;
+    }
+
+    /* Give the page a fixed width and center for the desktop layout. */
+    .page {
+        width: 960px;
+        margin: 0 auto;
+    }
+
+    .container {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .nav-link {
+        padding: 0.5em 1em;
+    }
+
+    .content {
+        padding: 45px;
+    }
+
+    .profile-pic {
+        width: 250px;
     }
 }
