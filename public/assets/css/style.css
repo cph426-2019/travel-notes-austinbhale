@@ -59,8 +59,9 @@ body {
     position: fixed;
     justify-content: space-between;
     width: 100%;
-    background-color: #000000;
+    background-color: #0e1111;
     text-align: center;
+    box-shadow: 1px 1px rgb(47, 47, 47);
 }
 
 .nav-header {
