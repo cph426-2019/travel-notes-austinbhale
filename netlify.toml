@@ -4,4 +4,4 @@
     # The command to run production build
     command = "npm run build"
     # Publish directory
-    publish = "dist/
+    publish = "dist/"
