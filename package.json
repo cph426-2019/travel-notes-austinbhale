@@ -1,0 +1,23 @@
+{
+  "name": "travel-notes-austinbhale",
+  "version": "1.0.0",
+  "description": "Austin's travel notes.",
+  "main": "index.js",
+  "scripts": {
+        "start": "parcel src/*.html --open",
+        "build": "parcel build src/*.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cph426-2019/travel-notes-austinbhale.git"
+  },
+  "author": "Austin Hale",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cph426-2019/travel-notes-austinbhale/issues"
+  },
+  "homepage": "https://github.com/cph426-2019/travel-notes-austinbhale#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.3"
+  }
+}
