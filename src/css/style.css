@@ -48,7 +48,7 @@ body {
     background-attachment: inherit;
     height: 350px;
     color: rgb(228, 228, 228);
-    background-image: url('../images/cph-bg.jpg');
+    background-image: url('../../static/img/cph-bg.jpg');
     border-bottom: 6px solid black;
     display: flex;
     justify-content: center;
@@ -61,7 +61,6 @@ body {
     width: 100%;
     background-color: #0e1111;
     text-align: center;
-    box-shadow: 1px 1px rgb(47, 47, 47);
 }
 
 .nav-header {
@@ -210,15 +209,15 @@ hr {
 /* Transitions through the color scheme of Copenhagen houses. */
 @keyframes bg {
     0% {
-        background-color: #EBDBCA
+        background-color: #EBDBCA;
     }
 
     20% {
-        background-color: #F77206
+        background-color: #F77206;
     }
 
     40% {
-        background-color: #075895
+        background-color: #075895;
     }
 
     60% {
@@ -226,12 +225,88 @@ hr {
     }
 
     80% {
-        background-color: #2B967F
+        background-color: #2B967F;
     }
 
     100% {
         background-color: #FEDE0E;
     }
+}
+
+/* Begin gallery style from lecture. */
+.gallery__master {
+    list-style: none;
+    font-size: 0.75em;
+    display: flex;
+    overflow-x: auto;
+    height: 25vh;
+    margin-bottom: 10px;
+}
+
+.gallery__thumb {
+    height: 20vh;
+    margin-right: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery__thumb:hover {
+    cursor: pointer;
+}
+
+.gallery__thumb-img-wrap {
+    display: block;
+    width: 19vh;
+    height: 19vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery__thumb-img {
+    max-width: 19vh;
+    max-height: 19vh;
+    vertical-align: middle;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.gallery__detail-img-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 78vh;
+}
+
+.gallery__detail-img {
+    margin-top: 2vh;
+    max-height: 78vh;
+    max-width: 49vh;
+}
+
+.gallery__caption {
+    text-align: center;
+}
+
+.gallery__thumb.selected .gallery__thumb-img-wrap {
+    border-bottom: 2px solid #2B967F;
+}
+
+.gallery__master::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.3);
+    background-color: rgb(228, 228, 228);
+}
+
+.gallery__master::-webkit-scrollbar {
+    height: 2.5px;
+    background-color: rgb(228, 228, 228);
+}
+
+.gallery__master::-webkit-scrollbar-thumb {
+    background-color: #0e1111;
 }
 
 /* Tablet Styles */
@@ -250,6 +325,10 @@ hr {
 
     .content {
         padding: 40px;
+    }
+
+    .gallery__detail-img {
+        max-width: 100%;
     }
 }
 
@@ -286,5 +365,9 @@ hr {
 
     .profile-pic {
         width: 250px;
+    }
+
+    .gallery__detail-img {
+        max-width: 100%;
     }
 }

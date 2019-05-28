@@ -18,7 +18,12 @@
   },
   "homepage": "https://github.com/cph426-2019/travel-notes-austinbhale#readme",
   "devDependencies": {
+    "@types/react": "^16.8.18",
+    "@types/react-dom": "^16.8.4",
     "parcel-bundler": "^1.12.3",
+    "parcel-plugin-static-files-copy": "^2.1.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
     "typescript": "^3.4.5"
   }
 }
