@@ -81,7 +81,7 @@ body {
 
 .nav-link {
     text-decoration: none;
-    font-size: 1.2em;
+    font-size: 1em;
     padding: 0.3em 1em;
     color: rgba(228, 228, 228);
     font-weight: lighter;
@@ -321,6 +321,7 @@ hr {
 
     .nav-link {
         padding: 0.8em 1em;
+        font-size: 1.2em;
     }
 
     .content {
@@ -357,6 +358,7 @@ hr {
 
     .nav-link {
         padding: 0.5em 1em;
+        font-size: 1.2em;
     }
 
     .content {
