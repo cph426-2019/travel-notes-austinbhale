@@ -1,5 +1,50 @@
-<html>
-    <body>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway&display=swap" rel="stylesheet">
+</head>
+
+<body class="page">
+
+    <!-- Mobile navigation overlay -->
+    <div id="mobileNav" class="overlay">
+        <span id="closeButton" class="close-button">&times;</span>
+        <div class="overlay-content">
+            <a href="/about-me">About</a>
+            <a href="/bucket-list">Wish List</a>
+            <a href="/gallery">Photos</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="header-ctr {{sectionHdr}}">
+            <div class="header">
+                <div class="nav-header"><a class="nav-link" href="/">Austin's Notes</a></div>
+                <div class="nav">
+                    <div class="nav-item"><a class="nav-link" href="/about-me">About Me</a></div>
+                    <div class="nav-item"><a class="nav-link" href="/bucket-list">Bucket List</a></div>
+                    <div class="nav-item"><a class="nav-link" href="/gallery">Photo Gallery</a></div>
+                </div>
+            </div>
+            <div class="header-mobile">
+                <span id="openButton" class="open-button">&#9776;</span>
+                <a id="homeLink" href="/">Austin's Notes</a>
+                <!-- Ignores this span for left and center flexbox alignment -->
+                <span></span>
+            </div>
+        </div>
         {{{ body }}}
-    </body>
+        <footer class="footer">
+            <p class="footer-copyright">Ⓒ 2019 Austin Hale</p>
+        </footer>
+    </div>
+    <script src="./main.js"></script>
+</body>
+
 </html>
