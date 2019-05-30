@@ -15,14 +15,14 @@ export default [
         "caption": "Aros Purple Panorama",
     },
     {
-        "thumbSrc": "./img/aros-yellow-thumbnail.jpg",
-        "src": "./img/aros-yellow.jpg",
-        "caption": "Aros Yellow Panorama",
-    },
-    {
         "thumbSrc": "./img/church-thumbnail.jpg",
         "src": "./img/church.jpg",
         "caption": "Church by Round Tower",
+    },
+    {
+        "thumbSrc": "./img/aros-yellow-thumbnail.jpg",
+        "src": "./img/aros-yellow.jpg",
+        "caption": "Aros Yellow Panorama",
     },
     {
         "thumbSrc": "./img/freetown-thumbnail.jpg",

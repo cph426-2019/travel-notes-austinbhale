@@ -11,8 +11,19 @@
 </head>
 
 <body class="page">
+
+    <!-- Mobile navigation overlay -->
+    <div id="mobileNav" class="overlay">
+        <span id="closeButton">&times;</span>
+        <div class="overlay-content">
+            <a href="./about-me.html">About Me</a>
+            <a href="./bucket-list.html">Bucket List</a>
+            <a href="./gallery.html">Photo Gallery</a>
+        </div>
+    </div>
+
     <div class="container">
-        <div class="header-ctr">
+        <div class="header-ctr gallery-hdr">
             <div class="header">
                 <div class="nav-header"><a class="nav-link" href="./index.html">Austin's Notes</a></div>
                 <div class="nav">
@@ -20,6 +31,12 @@
                     <div class="nav-item"><a class="nav-link" href="./bucket-list.html">Bucket List</a></div>
                     <div class="nav-item"><a class="nav-link" href="./gallery.html">Photo Gallery</a></div>
                 </div>
+            </div>
+            <div class="header-mobile">
+                <span id="openButton">&#9776;</span>
+                <a id="homeLink" href="./index.html">Austin's Notes</a>
+                <!-- Ignores this span for left and center flexbox alignment -->
+                <span></span>
             </div>
         </div>
         <div class="content">

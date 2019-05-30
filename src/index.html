@@ -11,8 +11,19 @@
 </head>
 
 <body class="page">
+
+    <!-- Mobile navigation overlay -->
+    <div id="mobileNav" class="overlay">
+        <span id="closeButton" class="close-button">&times;</span>
+        <div class="overlay-content">
+            <a href="./about-me.html">About</a>
+            <a href="./bucket-list.html">Wish List</a>
+            <a href="./gallery.html">Photos</a>
+        </div>
+    </div>
+
     <div class="container">
-        <div class="header-ctr">
+        <div class="header-ctr index-hdr">
             <div class="header">
                 <div class="nav-header"><a class="nav-link" href="./index.html">Austin's Notes</a></div>
                 <div class="nav">
@@ -21,11 +32,17 @@
                     <div class="nav-item"><a class="nav-link" href="./gallery.html">Photo Gallery</a></div>
                 </div>
             </div>
+            <div class="header-mobile">
+                <span id="openButton" class="open-button">&#9776;</span>
+                <a id="homeLink" href="./index.html">Austin's Notes</a>
+                <!-- Ignores this span for left and center flexbox alignment -->
+                <span></span>
+            </div>
         </div>
         <div class="section content">
             <h1 class="content-title">Study Abroad in Copenhagen</h1>
             <hr />
-            <div class="blog-post" id="ready-for-departur">
+            <div class="blog-post" id="ready-for-departure">
                 <h2 class="blog-title">One Week Complete</h2>
                 <p class="content-date"><em>May 27, 2019</em></p>
                 <div class="content-body">
@@ -122,9 +139,9 @@
                 </div>
             </div>
         </div>
-        <div class="footer">
+        <footer class="footer">
             <p class="footer-copyright">Ⓒ 2019 Austin Hale</p>
-        </div>
+        </footer>
     </div>
     <script src="./main.ts"></script>
 </body>
