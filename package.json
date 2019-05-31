@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "ts-node server/index.ts",
-    "build": "parcel build client/{*.css,gallery.tsx,main.ts}"
+    "build": "parcel build client/{*.css,gallery.tsx,main.ts}",
+    "prod": "git pull && npm install && npm run build && sudo npm run start",
+    "deploy": "ssh -i ~/.ssh/COMP426-2019.pem ubuntu@52.14.146.28 'sudo service blog_app restart'"
   },
   "repository": {
     "type": "git",
