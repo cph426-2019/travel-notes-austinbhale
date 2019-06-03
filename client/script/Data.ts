@@ -40,7 +40,7 @@ export default [
         "caption": "Sunset at Copenhagen",
     },
     {
-        "thumbSrc": "img/album-cover-thumbnail",
+        "thumbSrc": "img/album-cover-thumbnail.jpg",
         "src": "img/album-cover.jpg",
         "caption": "Album Cover of the Century",
     },
