@@ -306,7 +306,7 @@ hr {
     display: block;
     position: fixed;
     width: 100%;
-    padding: 8px;
+    padding: 14px;
     background-color: #0e1111;
     text-align: center;
 }
@@ -364,7 +364,7 @@ hr {
 #openButton {
     visibility: visible;
     position: fixed;
-    top: 5px;
+    top: 11px;
     left: 10px;
     width: 25px;
     z-index: 2;
