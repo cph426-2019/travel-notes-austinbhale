@@ -1,3 +1,5 @@
+import * as dotenv from "dotenv";
+dotenv.config();
 import * as express from "express";
 import * as exphbs from "express-handlebars";
 
@@ -40,5 +42,9 @@ app.get("/gallery", (req, res) => {
     });
 });
 
-app.listen(1234, () => console.log("Listening on 1234"))
+export let main = async () => {
+    app.listen(process.env.PORT, () => console.log(`Listening on ${process.env.PORT}`))
     .on("error", (e) => console.error(e));
+};
+
+main();

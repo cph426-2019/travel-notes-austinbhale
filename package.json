@@ -1,13 +1,13 @@
 {
   "name": "travel-notes-austinbhale",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Austin's travel notes.",
   "main": "index.js",
   "scripts": {
     "start": "ts-node server/index.ts",
     "build": "parcel build client/{*.css,gallery.tsx,main.ts}",
-    "prod": "git pull && npm install && npm run build && sudo npm run start",
-    "deploy": "ssh -i ~/.ssh/COMP426-2019.pem ubuntu@52.14.146.28 'sudo service blog_app restart'"
+    "prod": "git reset --hard && git pull && npm install && npm run build && sudo NODE_ENV=production npm run start",
+    "deploy": "ssh blog 'sudo service blog_app restart'"
   },
   "repository": {
     "type": "git",
@@ -34,6 +34,7 @@
     "typescript": "^3.4.5"
   },
   "dependencies": {
+    "dotenv": "^8.0.0",
     "express": "^4.17.1",
     "express-handlebars": "^3.1.0",
     "handlebars": "^4.1.2",
