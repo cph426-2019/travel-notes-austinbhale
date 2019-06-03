@@ -2,6 +2,8 @@ import * as dotenv from "dotenv";
 dotenv.config();
 import * as express from "express";
 import * as exphbs from "express-handlebars";
+import { DB, Rows } from "./db";
+import * as moment from "moment";
 
 let app = express();
 
@@ -14,14 +16,16 @@ app.engine("hbs", exphbs({
 
 app.use(express.static("dist/"));
 
-app.get("/", (req, res) => {
+app.get("/", async (req, res) => {
+    let [rows] = await DB.query<Rows>("SELECT * FROM posts ORDER BY publishAt DESC");
+    rows.map((rows) => rows.publishAt = moment(rows.publishAt).utc().format('MMMM D, YYYY'));
     res.render("index", {
         title: "Austin's Notes",
         sectionHdr: "index-hdr",
+        posts: rows
     });
 });
 
-import { DB, Rows } from "./db";
 import { async } from "q";
 app.get("/todos.json", async (req, res) => {
     let [rows, fields] = await DB.query<Rows>("SELECT * FROM todos");
