@@ -1,3 +1,5 @@
+import * as dotenv from "dotenv";
+dotenv.config();
 import * as express from "express";
 import * as exphbs from "express-handlebars";
 
@@ -40,6 +42,9 @@ app.get("/gallery", (req, res) => {
     });
 });
 
-const PORT = process.env.NODE_ENV === "production" ? 80 : 1234;
-app.listen(PORT, () => console.log(`Listening on ${PORT}`))
+export let main = async () => {
+    app.listen(process.env.PORT, () => console.log(`Listening on ${process.env.PORT}`))
     .on("error", (e) => console.error(e));
+};
+
+main();
