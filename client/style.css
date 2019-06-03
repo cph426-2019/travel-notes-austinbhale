@@ -41,8 +41,8 @@ body {
 }
 
 .container {
-    width: 85%;
-    margin: 0 7.5%;
+    width: 90%;
+    margin: 0 5%;
     background: rgb(228, 228, 228);
     font-family: 'Raleway', sans-serif;
     font-size: 1em;
@@ -306,7 +306,7 @@ hr {
     display: block;
     position: fixed;
     width: 100%;
-    padding: 6px;
+    padding: 8px;
     background-color: #0e1111;
     text-align: center;
 }
@@ -364,22 +364,35 @@ hr {
 #openButton {
     visibility: visible;
     position: fixed;
-    top: 0;
-    left: 0;
+    top: 5px;
+    left: 10px;
+    width: 25px;
+    z-index: 2;
     cursor: pointer;
-    font-size: 23.5px;
-    padding: 1px 8px;
-    z-index: 1;
 }
 
-#closeButton {
-    color: white;
-    position: absolute;
-    font-size: 40px;
-    top: 0;
-    right: 10px;
-    cursor: pointer;
-    z-index: 1;
+#openButton:after,
+#openButton:before,
+#openButton div {
+    background-color: rgba(228, 228, 228);
+    border-radius: 3px;
+    content: '';
+    display: block;
+    height: 2px;
+    margin: 6px 0;
+    transition: all .3s ease-in-out;
+}
+
+#openButton.menu-click:before {
+    transform: translateY(8px) rotate(135deg);
+}
+
+#openButton.menu-click:after {
+    transform: translateY(-8px) rotate(-135deg);
+}
+
+#openButton.menu-click div {
+    transform: scale(0);
 }
 
 /* Tablet Styles */

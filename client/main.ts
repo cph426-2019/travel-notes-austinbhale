@@ -4,14 +4,15 @@ export let main = () => {
 
     let mobileNav = window.document.getElementById("mobileNav");
     let openButton = window.document.getElementById("openButton");
-    let closeButton = window.document.getElementById("closeButton");
 
     openButton.addEventListener('click', function () {
-        mobileNav.style.width = "100%";
-    });    
-    
-    closeButton.addEventListener('click', function () {
-        mobileNav.style.width = "0%";
+        if (openButton.classList.contains("menu-click")) {
+            openButton.classList.remove("menu-click");
+            mobileNav.style.width = "0%";
+        } else {
+            openButton.classList.add("menu-click");
+            mobileNav.style.width = "100%";
+        }
     });
 };
 
