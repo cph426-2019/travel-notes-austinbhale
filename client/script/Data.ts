@@ -17,7 +17,7 @@ export default [
     {
         "thumbSrc": "img/church-thumbnail.jpg",
         "src": "img/church.jpg",
-        "caption": "Church by Round Tower",
+        "caption": "Church by the Round Tower",
     },
     {
         "thumbSrc": "img/aros-yellow-thumbnail.jpg",
@@ -38,5 +38,35 @@ export default [
         "thumbSrc": "img/sunset-thumbnail.jpg",
         "src": "img/sunset.jpg",
         "caption": "Sunset at Copenhagen",
+    },
+    {
+        "thumbSrc": "img/album-cover-thumbnail",
+        "src": "img/album-cover.jpg",
+        "caption": "Album Cover of the Century",
+    },
+    {
+        "thumbSrc": "img/bike-tour-thumbnail.jpg",
+        "src": "img/bike-tour.jpg",
+        "caption": "Surviving a Bike Tour",
+    },
+    {
+        "thumbSrc": "img/church-of-our-savior-thumbnail.jpg",
+        "src": "img/church-of-our-savior.jpg",
+        "caption": "Church of Our Savior Climb",
+    },
+    {
+        "thumbSrc": "img/reffen-thumbnail.jpg",
+        "src": "img/reffen.jpg",
+        "caption": "Golden Hour at Reffen",
+    },
+    {
+        "thumbSrc": "img/tivoli-castle-thumbnail.jpg",
+        "src": "img/tivoli-castle.jpg",
+        "caption": "Tivoli Castle",
+    },
+    {
+        "thumbSrc": "img/tivoli-park-thumbnail.jpg",
+        "src": "img/tivoli-park.jpg",
+        "caption": "Tivoli Park at Night",
     },
 ];
