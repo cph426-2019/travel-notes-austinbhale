@@ -20,8 +20,8 @@ export default [
         "caption": "Church by the Round Tower",
     },
     {
-        "thumbSrc": "img/aros-yellow-thumbnail.jpg",
-        "src": "img/aros-yellow.jpg",
+        "thumbSrc": "img/aros-squad-thumbnail.jpg",
+        "src": "img/aros-squad.jpg",
         "caption": "Aros Yellow Panorama",
     },
     {
