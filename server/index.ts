@@ -21,6 +21,33 @@ app.get("/", (req, res) => {
     });
 });
 
+import { DB, Rows } from "./db";
+import { async } from "q";
+app.get("/todos.json", async (req, res) => {
+    let [rows, fields] = await DB.query<Rows>("SELECT * FROM todos");
+    res.json(rows);
+});
+
+app.get("/todos", async (req, res) => {
+    // Destructuring assignment
+    let [rows] = await DB.query<Rows>("SELECT * FROM todos");
+    res.render("todos", {todos: rows});
+});
+
+app.get("/todos/eat", async (req, res) => {
+    let sql = "INSERT INTO `blog`.`todos` (`description`, `url`) VALUES (:description, :url)";
+    await DB.execute(
+        sql,
+        {description: "EAT!!!", url: "http://food.com"}
+    );
+    res.redirect("/todos");
+});
+
+app.get("/todos/:id", async (req, res) => {
+    let [rows] = await DB.query<Rows>("SELECT * FROM todos WHERE id = :id", {id: req.params.id});
+    res.json(rows);
+});
+
 app.get("/about-me", (req, res) => {
     res.render("about-me", {
         title: "About Me",
