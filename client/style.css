@@ -147,8 +147,12 @@ body {
     display: none;
 }
 
-.content-body a, .index-body a {
+.content-body a {
     color: #075895;
+}
+
+.index-body a {
+    color: #F77206;
 }
 
 .content-body a:hover, .index-body a:hover {
