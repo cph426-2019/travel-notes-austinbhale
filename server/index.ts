@@ -2,8 +2,11 @@ import * as dotenv from "dotenv";
 dotenv.config();
 import * as express from "express";
 import * as exphbs from "express-handlebars";
-import { DB, Rows } from "./db";
 import * as moment from "moment";
+
+import { DB, Rows } from "./db";
+
+import admin from "./admin";
 
 let app = express();
 
@@ -15,10 +18,11 @@ app.engine("hbs", exphbs({
 }));
 
 app.use(express.static("dist/"));
+app.use(express.urlencoded({extended: true}));
 
 app.get("/", async (req, res) => {
     let [rows] = await DB.query<Rows>("SELECT * FROM posts ORDER BY publishAt DESC");
-    rows.map((rows) => rows.publishAt = moment(rows.publishAt).utc().format('MMMM D, YYYY'));
+    rows.map((rows) => rows.publishAt = moment(rows.publishAt).format('MMMM D, YYYY'));
     res.render("index", {
         title: "Austin's Notes",
         sectionHdr: "index-hdr",
@@ -71,6 +75,32 @@ app.get("/gallery", (req, res) => {
         title: "Photo Gallery",
         sectionHdr: "gallery-hdr",
     });
+});
+
+app.use("/admin", admin);
+
+// To see individual posts on client-side.
+app.get("/:id", async (req, res) => {
+    let sql = "SELECT * FROM posts WHERE id=:id";
+    let params = {
+        id: req.params.id
+    };
+    try {
+        let [rows] = await DB.query<Rows>(sql, params);
+        rows.map((rows) => rows.publishAt = moment(rows.publishAt).format('MMMM D, YYYY'));
+        if (rows.length === 1) {
+            res.render("post", {
+                post: rows[0],
+                action: `${req.baseUrl}${req.path}`,
+                layout: "default",                
+                sectionHdr: "index-hdr",
+            });
+        } else {
+            res.redirect(`${req.baseUrl}${req.path}/../`);
+        }
+    } catch (e) {
+        res.redirect(`${req.baseUrl}${req.path}/../`);
+    }
 });
 
 export let main = async () => {

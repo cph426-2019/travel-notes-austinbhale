@@ -1,0 +1,40 @@
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/admin">Home</a></li>
+        <li class="breadcrumb-item"><a href="/admin/todos">Todos</a></li>
+        <li class="breadcrumb-item active" aria-current="page">
+            {{#if todo.id }}
+                {{ todo.description }}
+            {{else}}
+                New
+            {{/if}}
+        </li>
+    </ol>
+</nav>
+
+<form action="{{ action }}" method="POST">
+    {{#if message }}
+        <div class="alert alert-dark">{{ message }}</div>
+    {{/if}}
+    <div class="form-group">
+        <label for="description">Description</label>
+        <input type="text" name="description" id="description" class="form-control" value="{{ todo.description }}">
+        <textarea class="md-textarea form-control" name="description">
+            {{{ description }}}
+        </textarea>
+        <small class="form-text text-muted">What do you need to do?</small>
+    </div>
+    <div class="form-group">
+        <label for="url">URL</label>
+        <input type="text" name="url" id="url" class="form-control" value="{{ todo.url }}">
+        <small class="form-text text-muted">If this todo has an associated web page, enter its URL.</small>
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+    <a href="/admin/todos" class="btn btn-secondary">Back</a>
+</form>
+{{#if todo.id }}
+    <hr>
+    <form action="{{ action }}/delete" method="POST" onsubmit="return confirm('Are you sure?')">
+        <button type="submit" class="btn btn-sm btn-danger">Delete</button>
+    </form>
+{{/if}}

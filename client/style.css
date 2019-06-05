@@ -64,19 +64,35 @@ body {
 }
 
 .index-hdr {
-    background-image: url('../../static/img/cph-bg.jpg');
+    background-image: url('../static/img/cph-bg.jpg');
 }
 
 .about-me-hdr {
-    background-image: url('../../static/img/freetown.jpg');
+    background-image: url('../static/img/freetown.jpg');
 }
 
 .bucket-list-hdr {
-    background-image: url('../../static/img/aros-blue.jpg');
+    background-image: url('../static/img/aros-blue.jpg');
 }
 
 .gallery-hdr {
-    background-image: url('../../static/img/sunset.jpg');
+    background-image: url('../static/img/sunset.jpg');
+}
+
+.hdr-4 {
+    background-image: url('../static/img/tivoli-park.jpg');
+}
+
+.hdr-3 {
+    background-image: url('../static/img/album-cover.jpg');
+}
+
+.hdr-2 {
+    background-image: url('../static/img/aros-art.jpg');
+}
+
+.hdr-1 {
+    background-image: url('../static/img/aros-purple.jpg');
 }
 
 .section {
@@ -101,6 +117,11 @@ body {
     margin-bottom: 25px;
 }
 
+.blog-link {
+    text-decoration: none;
+    color: #075895;
+}
+
 .content>div:last-child {
     margin-bottom: 0px;
 }
@@ -113,16 +134,24 @@ body {
     margin-bottom: 20px;
 }
 
-.content-body p {
+.index-body {
+    margin-bottom: 5px;
+}
+
+.content-body p, .index-body p {
     margin-bottom: 25px;
     line-height: 1.5em;
 }
 
-.content-body a {
+.index-body p:not(:first-child) {
+    display: none;
+}
+
+.content-body a, .index-body a {
     color: #075895;
 }
 
-.content-body a:hover {
+.content-body a:hover, .index-body a:hover {
     color: #F77206;
 }
 

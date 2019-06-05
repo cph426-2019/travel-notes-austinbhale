@@ -1,4 +1,4 @@
-<div class="header-ctr {{sectionHdr}}">
+<div class="header-ctr hdr-{{post.id}}">
     <div class="header">
         <div class="nav-header"><a class="nav-link" href="/">Austin's Notes</a></div>
         <div class="nav">
@@ -15,19 +15,12 @@
     </div>
 </div>
 <div class="section content">
-    <h1 class="content-title">Study Abroad in Copenhagen</h1>
+    <h1 class="content-title">{{post.title}}</h1>
     <hr />
-    {{#each posts}}
-    <div class="blog-post" id={{id}}>
-        <h2 class="blog-title">
-            <a href="{{id}}" class="blog-link">{{title}}</a>
-        </h2>
-        <p class="content-date"><em>{{publishAt}}</em></p>
-        <div class="index-body">
-            {{{body}}}
+    <div class="blog-post" id={{post.id}}>
+        <p class="content-date"><em>{{post.publishAt}}</em></p>
+        <div class="content-body">
+            <p>{{{post.body}}}</p>
         </div>
-        <a href="{{id}}">Continue reading...</a>
     </div>
-    <hr />
-    {{/each}}
 </div>

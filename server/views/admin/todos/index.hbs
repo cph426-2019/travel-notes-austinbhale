@@ -1,0 +1,21 @@
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/admin">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Todos</li>
+    </ol>
+</nav>
+<h2 class="pt-2">Todos <a href="/admin/todos/new" class="btn btn-sm btn-light">New</a></h2>
+<table class="table">
+    <thead>
+        <tr><th>ID</th><th>Description</th><th>Actions</th></tr>
+    </thead>
+    <tbody>
+        {{#each todos}}
+        <tr>
+            <td>{{ id }}</td>
+            <td>{{ description }}</td>
+            <td><a href="/admin/todos/{{ id }}" class ="btn btn-sm btn-primary">Edit</a></td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

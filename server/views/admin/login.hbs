@@ -1,0 +1,11 @@
+<form action="/admin/login" method="POST">
+    {{#if message }}
+        <div class="alert alert-dark">{{ message }}</div>
+    {{/if}}
+    <div class="form-group">
+        <label for="description">Password</label>
+        <input type="password" name="password" id="password" class="form-control">
+        <small class="form-text text-muted">What is your password?</small>
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>

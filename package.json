@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "ts-node server/index.ts",
-    "build": "parcel build client/{*.css,gallery.tsx,main.ts}",
+    "build": "rm -rf dist && parcel build client/{*.css,gallery.tsx,main.ts}",
     "prod": "git reset --hard && git pull && npm install && npm run build && sudo NODE_ENV=production npm run start",
     "deploy": "ssh blog 'sudo service blog_app restart'"
   },
@@ -20,6 +20,8 @@
   },
   "homepage": "https://github.com/cph426-2019/travel-notes-austinbhale#readme",
   "devDependencies": {
+    "@types/bcrypt": "^3.0.0",
+    "@types/cookie-parser": "^1.4.1",
     "@types/express": "^4.16.1",
     "@types/handlebars": "^4.1.0",
     "@types/mysql2": "github:types/mysql2",
@@ -34,6 +36,8 @@
     "typescript": "^3.4.5"
   },
   "dependencies": {
+    "bcrypt": "^3.0.6",
+    "cookie-parser": "^1.4.4",
     "dotenv": "^8.0.0",
     "express": "^4.17.1",
     "express-handlebars": "^3.1.0",
