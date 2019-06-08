@@ -30,7 +30,6 @@ app.get("/", async (req, res) => {
     });
 });
 
-import { async } from "q";
 app.get("/todos.json", async (req, res) => {
     let [rows, fields] = await DB.query<Rows>("SELECT * FROM todos");
     res.json(rows);
