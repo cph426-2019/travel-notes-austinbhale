@@ -5,3 +5,7 @@
     command = "npm run build"
     # Publish directory
     publish = "dist/"
+
+[[redirects]]
+    from = "/*"
+    to = "http://austinhale.cph426.com/"
